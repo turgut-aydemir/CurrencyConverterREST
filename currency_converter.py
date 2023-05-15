@@ -1,9 +1,10 @@
 import requests
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from xml.etree import ElementTree as ET
 
 app = Flask(__name__)
-
+CORS(app)  # Enable CORS for all routes
 
 @app.route('/currency_converter', methods=['GET'])
 def convert_currency():
