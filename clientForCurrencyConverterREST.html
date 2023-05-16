@@ -25,7 +25,7 @@
       var fromCurrency = document.getElementById("from_currency").value;
       var toCurrency = document.getElementById("to_currency").value;
 
-      var url = "http://localhost:5000/currency_converter?amount=" + amount + "&from_currency=" + fromCurrency + "&to_currency=" + toCurrency;
+      var url = "https://currencyconverterrest.azurewebsites.net/currency_converter?amount=" + amount + "&from_currency=" + fromCurrency + "&to_currency=" + toCurrency;
 
       var xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);
