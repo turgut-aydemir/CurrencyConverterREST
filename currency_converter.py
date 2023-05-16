@@ -63,4 +63,4 @@ def get_conversion_rate(rates, from_currency, to_currency):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8000)
