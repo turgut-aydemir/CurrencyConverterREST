@@ -59,8 +59,8 @@ def get_conversion_rate(rates, from_currency, to_currency):
     elif to_currency == 'EUR':
         return 1 / rates.get(from_currency)
     else:
-        return rates.get(to_currency) / rates.get(from_currency)
+        return rates.get(to_currency) / rates.get(from_currency) # cross calculation of rates
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run()
