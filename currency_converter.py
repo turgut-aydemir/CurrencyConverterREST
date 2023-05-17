@@ -64,5 +64,5 @@ def get_conversion_rate(rates, from_currency, to_currency):
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8000))  # Use the environment variable for port, or default to 8000
+    port = int(os.environ.get('PORT', 80))  # Use the environment variable for port, or default to 80
     app.run(host='0.0.0.0', port=port)
