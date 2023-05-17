@@ -1,5 +1,5 @@
 import requests
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from xml.etree import ElementTree as ET
 
@@ -61,6 +61,9 @@ def get_conversion_rate(rates, from_currency, to_currency):
     else:
         return rates.get(to_currency) / rates.get(from_currency) # cross calculation of rates
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
