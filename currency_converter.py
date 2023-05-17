@@ -2,7 +2,6 @@ import requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from xml.etree import ElementTree as ET
-import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -64,5 +63,4 @@ def get_conversion_rate(rates, from_currency, to_currency):
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 80))  # Use the environment variable for port, or default to 80
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=8000)
