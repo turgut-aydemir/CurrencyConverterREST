@@ -6,6 +6,7 @@ from xml.etree import ElementTree as ET
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+
 @app.route('/currency_converter', methods=['GET'])
 def convert_currency():
     amount = float(request.args.get('amount', default=0))
